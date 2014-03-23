@@ -1,0 +1,22 @@
+1. Make two tables called temp_members_db and registered_members.
+
+2. To create temp_members_db using sql commands:
+		CREATE TABLE `temp_members_db` (
+		`confirm_code` varchar(65) NOT NULL default '',
+		`name` varchar(65) NOT NULL default '',
+		`email` varchar(65) NOT NULL default '',
+		`password` varchar(15) NOT NULL default ''
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+3. To create registerd_members using sql commands:
+		CREATE TABLE `registered_members` (
+		`id` int(4) NOT NULL auto_increment,
+		`name` varchar(65) NOT NULL default '',
+		`email` varchar(65) NOT NULL default '',
+		`password` varchar(65) NOT NULL default '',
+		PRIMARY KEY (`id`)
+		) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+4. In config.php, change the $user,$password and the $db_name according to your mysql server.
+
+5. Write any problem you face in the error.txt file in numeric order and we can try helping you by posting the answers there.

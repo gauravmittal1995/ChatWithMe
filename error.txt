@@ -1,0 +1,12 @@
+Use this file to share your problems and ask your doubts openly. Can be annonymous:
+This file can also be used as a Bug tracker file. Report the bug in this file.
+
+example:
+1. I want to know more about Git and how to use it.
+Ans: Check out http://git-scm.com/documentation to learn more about git.
+
+Keep appending the answers so that the user can select any answer which favours him. Dont erase any answers since every answer may be useful.
+Dont be shy to ask any question. =)
+
+QUESTIONS:
+

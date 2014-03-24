@@ -14,7 +14,7 @@ if($result1){
 
 // Count how many row has this passkey
 $count=mysqli_num_rows($result1);
-//echo($count);
+
 // if found this passkey in our database, retrieve data from table "temp_members_db"
 if($count==1){
 
@@ -23,11 +23,11 @@ $name=$rows['name'];
 $email=$rows['email'];
 $password=$rows['password']; 
 $tbl_name2="registered_members";
-//echo("NEWBIE");
+
 // Insert data that retrieves from "temp_members_db" into table "registered_members" 
 $sql2="INSERT INTO $tbl_name2(name, email, password)VALUES('$name', '$email', '$password')";
 $result2=mysqli_query($conn,$sql2);
-//echo("$result2");
+
 }
 
 // if not found passkey, display message "Wrong Confirmation code" 

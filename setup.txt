@@ -17,6 +17,12 @@
 		PRIMARY KEY (`id`)
 		) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
-4. In config.php, change the $user,$password and the $db_name according to your mysql server.
+4. If you want to skip steps 2 and 3, go to your terminal and run the file setup.php using the command "php setup.php". Before running it open the file and change the $user, $password, $host, $db_name according to your mysql server. After running the command you should get the output:
+"Table temp_members_d succesfully created. 
+Table registered_member succesfully created. 
+Tables created."
+If you get any trouble try debugging yourself or follow step 6.
 
-5. Write any problem you face in the error.txt file in numeric order and we can try helping you by posting the answers there.
+5. After creating the table, in config.php, change the $host, $user, $password and the $db_name according to your mysql server.
+
+6. Write any problem you face in the error.txt file in numeric order and we can try helping you by posting the answers there.

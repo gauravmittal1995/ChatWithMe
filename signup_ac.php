@@ -13,7 +13,6 @@ $email=$_POST['email'];
 $password=$_POST['password'];
 
 // Insert data into database
-//echo(" table name = $tbl_name confirn code = $confirm_code, name= $name , email = $email, pass= $password");
 
 $sql="INSERT INTO $tbl_name(confirm_code, name, email, password) VALUES ('$confirm_code', '$name', '$email', '$password')";
 $result=mysqli_query($conn,$sql);
@@ -36,7 +35,7 @@ $headers = 'From: gauravmittal1995@yahoo.com' . "\r\n" .
 // Your message
 $message="http://localhost/project/confirmation.php?passkey=$confirm_code";
 $message = wordwrap($message, 70, "\r\n");
-//echo("$message");
+
 
 // send email
 $sentmail = mail($to, $subject, $message, $headers);

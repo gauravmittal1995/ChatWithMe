@@ -1,1 +1,1 @@
-his is a Web Chat App for public as well as private chat.
+This is a Web Chat App for public as well as private chat.

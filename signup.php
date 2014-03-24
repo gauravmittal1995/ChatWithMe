@@ -17,6 +17,17 @@ include("headerfooter.html")
 <script src="js/typeahead.js"></script>
 <script src="js/collapse.js"></script>
 <script src="js/transition.js"></script>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery.ui.core.js"></script>
+<script src="js/jquery.ui.datepicker.js"></script>
+<script src="js/jquery.ui.widget.js"></script>
+<link rel="stylesheet" href="css/jquery.ui.all.css">
+<script>
+	$(function() {
+		$( "#dob" ).datepicker();
+		$( "#dob" ).datepicker( "mm/dd/yy", "dateFormat", $( this ).val() );
+	});
+</script>
 
 <div class="container">
 	<form>
@@ -29,7 +40,7 @@ include("headerfooter.html")
 			</td>
 			<td>
 			<label class="text-center">
-			<input type="text" placeholder=""></label>
+			<input type="text" placeholder="" required></label>
 			</td>
 			</tr>
 			<tr>
@@ -38,7 +49,7 @@ include("headerfooter.html")
 			</td>
 			<td>
 			<label class="text-center">			
-			<input type="password" placeholder=""></label>
+			<input type="password" placeholder="" required></label>
 			</td>
 			</tr>
 			<tr>
@@ -71,7 +82,7 @@ include("headerfooter.html")
 			</td>
 			<td>
 			<label class="text-center">
-			<input type="text" name="name" id="name" placeholder=""></label>
+			<input type="text" name="name" id="name" placeholder="" required></label>
 			</td>
 			</tr>
 			<tr>
@@ -80,7 +91,7 @@ include("headerfooter.html")
 			</td>
 			<td>
 			<label class="text-center">			
-			<input type="password" name="password" id="password" placeholder=""></label>
+			<input type="password" name="password" id="password" placeholder="" required></label>
 			</td>
 			</tr>
 			<tr>
@@ -89,7 +100,25 @@ include("headerfooter.html")
 			</td>
 			<td>
 			<label class="text-center">			
-			<input type="text" name="email" id="email" placeholder=""></label>
+			<input type="text" name="email" id="email" placeholder="" required></label>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<label class="text-center">Handle name</label>
+			</td>
+			<td>
+			<label class="text-center">			
+			<input type="text" name="handle" id="handle" placeholder="" required></label>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<label class="text-center">Date Of Birth</label>
+			</td>
+			<td>
+			<label class="text-center">			
+			<input type="text" name="dob" id="dob" placeholder="" required></label>
 			</td>
 			</tr>
 			<tr>

@@ -11,10 +11,12 @@ $confirm_code=md5(uniqid(rand()));
 $name=$_POST['name'];
 $email=$_POST['email'];
 $password=$_POST['password'];
+$handle=$_POST['handle'];
+$dob=$_POST['dob'];
 
 // Insert data into database
 
-$sql="INSERT INTO $tbl_name(confirm_code, name, email, password) VALUES ('$confirm_code', '$name', '$email', '$password')";
+$sql="INSERT INTO $tbl_name(confirm_code, name, email, password, handle, dob) VALUES ('$confirm_code', '$name', '$email', '$password', '$handle', '$dob')";
 $result=mysqli_query($conn,$sql);
 
 // if suceesfully inserted data into database, send confirmation link to email 
@@ -33,7 +35,7 @@ $headers = 'From: gauravmittal1995@yahoo.com' . "\r\n" .
 	        'X-Mailer: PHP/' . phpversion();
 
 // Your message
-$message="http://localhost/project/confirmation.php?passkey=$confirm_code";
+$message="http://localhost/ChatWithMe/confirmation.php?passkey=$confirm_code";
 $message = wordwrap($message, 70, "\r\n");
 
 

@@ -30,3 +30,5 @@ If you get any trouble try debugging yourself or follow step 6.
 5. After creating the table, in config.php, change the $host, $user, $password and the $db_name according to your mysql server.
 
 6. Write any problem you face in the error.txt file in numeric order and we can try helping you by posting the answers there.
+
+7. You can also write your issues under "issues" in github.

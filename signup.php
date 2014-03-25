@@ -30,7 +30,7 @@ include("headerfooter.html")
 </script>
 
 <div class="container">
-	<form>
+	<form name="form" method="post" action="login.php">
 		<fieldset>
 			<legend class="text-center">Login</legend>
 			<table class="table table-bordered table-condensed">
@@ -40,7 +40,7 @@ include("headerfooter.html")
 			</td>
 			<td>
 			<label class="text-center">
-			<input type="text" placeholder="" required></label>
+			<input name="username" id="username" type="text" placeholder="" required></label>
 			</td>
 			</tr>
 			<tr>
@@ -49,7 +49,7 @@ include("headerfooter.html")
 			</td>
 			<td>
 			<label class="text-center">			
-			<input type="password" placeholder="" required></label>
+			<input name="pass" id="pass" type="password" placeholder="" required></label>
 			</td>
 			</tr>
 			<tr>

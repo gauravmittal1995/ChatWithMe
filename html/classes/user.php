@@ -1,6 +1,5 @@
 <html><body>
 <?php
-
 # User class to hold information about the User
 
 /*
@@ -10,9 +9,12 @@
    1   : Done with complete success
 */
 
+$GLOBAL_userlist=array();
+$GLOBAL_activeusers=array();
+
 class User
 {
-	var $user_name,$user_handle;
+	public $user_name,$user_handle;
 	var $user_dob,$email,$passwd;
 
 	var $interest=array(),$friends=array();
@@ -36,18 +38,24 @@ class User
 		$this->user_dob= $dob;
 		$this->email= $email;
 		$this->passwd= $passwd;
+		
+		array_push($GLOBAL_userlist,$name);
+		//array_push($GLOBAL_activeusers,$this);
 
 		return 1;
 	}
 
-# edit add_friend to update the frined's userlist
+# edit add_friend to update the friend's frndlist 
 	public function add_friend($name)
 	{
 		if($name==NULL || array_search($name,$GLOBAL_userlist)==FALSE)
 			return -1;
 		if(array_search($name,$this->friends)!=FALSE)
 			return 0;
-		array_push($friends,$name);
+
+
+
+		array_push($this->friends,$name);
 		return 1;
 	}
 	public function remove_friend($name)
@@ -56,10 +64,10 @@ class User
 		if($index==FALSE)
 			return -1;
 
-		unset( $friends[$index] );
-		$friends=array_values($friends);
+		unset( $this->friends[$index] );
+		$this->friends=array_values($this->friends);
 	}
-
+#--------------------------------------------------------------------------------------------------------
 	public function add_interest($intr)
 	{
 		if($intr==NULL)
@@ -67,7 +75,7 @@ class User
 	
 		if(array_search($intr,$this->interest)!=FALSE)
 			return 0;
-		array_push($interest,$intr);
+		array_push($this->interest,$intr);
 		return 1;
 	}
 
@@ -78,15 +86,11 @@ class User
 		if($index==FALSE)
 			return -1;
 
-		unset( $interest[$index] );
-		$interest=array_values($interest);
+		unset( $this->interest[$index] );
+		$this->interest=array_values($this->interest);
 	}
 
 }
 echo "Aaditya"
 ?>
 </body></html>
-
-
-
-

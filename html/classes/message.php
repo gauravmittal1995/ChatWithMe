@@ -14,10 +14,13 @@
 		  1 : Job Done without errors
 */
 
+
+include 'user.php';
+
 class Message
 {
-	public var $sender,$reciever;
-	public var $msg,$datetime;
+	public $sender,$reciever;
+	public $msg,$datetime;
 
 	public function __construct($sender,$receiver,$msg)
 	{
@@ -25,7 +28,7 @@ class Message
 		$this->sender=$sender;
 		$this->reciever=$reciever;
 		$this->msg=$msg;
-		$this->datetime=DateTime("now") //check
+# Add code for Date Input
 	}
 }
 
@@ -36,6 +39,25 @@ class Conversation
 
 	public function __construct($party1,$party2)
 	{
-		if(array_search($party1,$GLOBAL_userlist) || array_search($party2,$GOLBAL_userlist)
+		if( !array_search($party1,$GLOBAL_userlist) || !array_search($party2,$GOLBAL_userlist) )
+			return -2;
+		
+		// Code to open Database and read a party1/party2 data here
+		// and check whether two are friends
+
+		$this->party1=$party1;
+		$this->party2=$party2;
+		$this->msglist=array();
+	}
+
+	public add_msg($sender,$reciever,$msg)
+	{
+		if($sender==$party1 && $reciever!=$party2 || $sender==$party2 && $reciever!=$party1)
+			return -1;
+		$message=new Message($sender,$reciever,$msg);
+		array_push($this->msglist,$message);
+	}
+
+}
 ?>
 </body></html>

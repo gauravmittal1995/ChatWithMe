@@ -1,22 +1,6 @@
 <?php
 include("headerfooter.html")
 ?>
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/bootstrap-responsive.css" rel="stylesheet">
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/dropdown.js"></script>
-<script src="js/alert.js"></script>
-<script src="js/modal.js"></script>
-<script src="js/scrollspy.js"></script>
-<script src="js/tab.js"></script>
-<script src="js/tooltip.js"></script>
-<script src="js/popover.js"></script>		
-<script src="js/button.js"></script>
-<script src="js/carousel.js"></script>
-<script src="js/typeahead.js"></script>
-<script src="js/collapse.js"></script>
-<script src="js/transition.js"></script>
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/jquery.ui.core.js"></script>
 <script src="js/jquery.ui.datepicker.js"></script>

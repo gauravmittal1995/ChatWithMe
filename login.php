@@ -28,7 +28,8 @@ $handle=$rows['handle'];
 
 //If password is correct.
 if($password==$pass){
-echo("Loggin succesful. Welcome $handle");
+//Redirect to new page sending the handle with it.
+header("Location: profile_make.php?handle=$handle");
 }
 //If password is incorrect.
 else{

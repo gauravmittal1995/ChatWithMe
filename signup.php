@@ -1,5 +1,5 @@
 <?php
-include("headerfooter.html")
+include("headerfooter.php")
 ?>
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/jquery.ui.core.js"></script>

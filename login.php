@@ -29,7 +29,7 @@ $handle=$rows['handle'];
 //If password is correct.
 if($password==$pass){
 //Redirect to new page sending the handle with it.
-header("Location: profile_make.php?handle=$handle");
+header("Location: profile.php?handle=$handle");
 }
 //If password is incorrect.
 else{

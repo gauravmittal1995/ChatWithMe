@@ -40,7 +40,7 @@ echo "Wrong Confirmation code";
 // if successfully moved data from table"temp_members_db" to table "registered_members" displays message "Your account has been activated" and don't forget to delete confirmation code from table "temp_members_db"
 if($result2){
 
-echo "Your account has been activated. You can edit your profile now by clicking <a href='profile_make.php'>here</a> or later on by clicking on accounts.";
+echo "Your account has been activated. You can now login by clicking <a href='signup.php'>here</a>.";
 
 // Delete information of this user from table "temp_members_db" that has this passkey 
 $sql3="DELETE FROM $tbl_name1 WHERE confirm_code = '$passkey'";

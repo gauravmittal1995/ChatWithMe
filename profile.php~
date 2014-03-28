@@ -4,7 +4,7 @@ session_start();
 
 //check whether session handle was set(i.e is already logged in.
 if(isset($_SESSION['handle'])){
-echo("Welcome to ChatWithMe,<strong> ". $_SESSION['handle']."</strong>.");
+echo("Welcome to ChatWithMe,". "$_SESSION['handle'].");
 }
 //If not logged in.
 else{

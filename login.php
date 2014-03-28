@@ -1,6 +1,6 @@
 <?php
 include("config.php");
-
+session_start();
 //table name.
 $tbl_name=registered_members;
 
@@ -28,8 +28,9 @@ $handle=$rows['handle'];
 
 //If password is correct.
 if($password==$pass){
-//Redirect to new page sending the handle with it.
-header("Location: profile.php?handle=$handle");
+//Redirect to new page after storing the handle in the session.
+$_SESSION['handle']=$handle;
+header("Location: profile.php");
 }
 //If password is incorrect.
 else{

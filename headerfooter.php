@@ -34,13 +34,13 @@
 					</a>
 
 					<!-- Be sure to leave the brand out there if you want it shown -->
-					<a class="brand" href="#"><strong>ChatWithMe</strong></a>
+					<a class="brand" href="index.php"><strong>ChatWithMe</strong></a>
 
 					<!-- Everything you want hidden at 940px or less, place within here -->
 					<div class="nav-collapse collapse">
 						<ul class="nav">
 							<li>
-								<a href="#">Profile</a>
+								<a href="profile.php">Profile</a>
 							</li>
 							<li class="dropdown">
                 						<a href="#" class="dropdown-toggle"  data-toggle="dropdown">ChatRooms<b class="caret"></b></a>
@@ -59,13 +59,27 @@
 						</ul>
 								<form class="navbar-search pull-left">   										<input type="text" class="search-query" placeholder="Search people"> 
     								</form>
-						<ul class="nav pull-right">						
-							<li>
-								<a href="#"><i class="icon-home icon-white"></i> Account</a>
+						<ul class="nav pull-right">
+							<?php
+							session_start();
+							if(isset($_SESSION['handle'])){
+							echo "<li>
+								<a href='profile_make.php'><i class='icon-home icon-white'></i> " . $_SESSION['handle'] . "</a>
 							</li>
+
 							<li>
-								<a href="signup.php"><i class="icon-user icon-white"></i> Login</a>
-							</li>						
+								<a href='logout.php'><i class='icon-user icon-white'></i> Logout</a>
+							</li>	
+								";							
+							}
+							else{
+							echo "
+							<li>
+								<a href='signup.php'><i class='icon-user icon-white'></i> Login</a>
+							</li>
+							";	
+							}
+							?>					
 						</ul>
 					<!-- .nav, .navbar-search, .navbar-form, etc -->
 					</div>

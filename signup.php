@@ -1,25 +1,20 @@
 <?php
-include("headerfooter.html")
+include("headerfooter.php")
 ?>
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/bootstrap-responsive.css" rel="stylesheet">
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/dropdown.js"></script>
-<script src="js/alert.js"></script>
-<script src="js/modal.js"></script>
-<script src="js/scrollspy.js"></script>
-<script src="js/tab.js"></script>
-<script src="js/tooltip.js"></script>
-<script src="js/popover.js"></script>		
-<script src="js/button.js"></script>
-<script src="js/carousel.js"></script>
-<script src="js/typeahead.js"></script>
-<script src="js/collapse.js"></script>
-<script src="js/transition.js"></script>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/jquery.ui.core.js"></script>
+<script src="js/jquery.ui.datepicker.js"></script>
+<script src="js/jquery.ui.widget.js"></script>
+<link rel="stylesheet" href="css/jquery.ui.all.css">
+<script>
+	$(function() {
+		$( "#dob" ).datepicker();
+		$( "#dob" ).datepicker( "mm/dd/yy", "dateFormat", $( this ).val() );
+	});
+</script>
 
 <div class="container">
-	<form>
+	<form name="form" method="post" action="login.php">
 		<fieldset>
 			<legend class="text-center">Login</legend>
 			<table class="table table-bordered table-condensed">
@@ -29,7 +24,7 @@ include("headerfooter.html")
 			</td>
 			<td>
 			<label class="text-center">
-			<input type="text" placeholder=""></label>
+			<input name="username" id="username" type="text" placeholder="" required></label>
 			</td>
 			</tr>
 			<tr>
@@ -38,7 +33,7 @@ include("headerfooter.html")
 			</td>
 			<td>
 			<label class="text-center">			
-			<input type="password" placeholder=""></label>
+			<input name="pass" id="pass" type="password" placeholder="" required></label>
 			</td>
 			</tr>
 			<tr>
@@ -71,7 +66,7 @@ include("headerfooter.html")
 			</td>
 			<td>
 			<label class="text-center">
-			<input type="text" name="name" id="name" placeholder=""></label>
+			<input type="text" name="name" id="name" placeholder="" required></label>
 			</td>
 			</tr>
 			<tr>
@@ -80,7 +75,7 @@ include("headerfooter.html")
 			</td>
 			<td>
 			<label class="text-center">			
-			<input type="password" name="password" id="password" placeholder=""></label>
+			<input type="password" name="password" id="password" placeholder="" required></label>
 			</td>
 			</tr>
 			<tr>
@@ -89,7 +84,25 @@ include("headerfooter.html")
 			</td>
 			<td>
 			<label class="text-center">			
-			<input type="text" name="email" id="email" placeholder=""></label>
+			<input type="text" name="email" id="email" placeholder="" required></label>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<label class="text-center">Handle name</label>
+			</td>
+			<td>
+			<label class="text-center">			
+			<input type="text" name="handle" id="handle" placeholder="" required></label>
+			</td>
+			</tr>
+			<tr>
+			<td>
+			<label class="text-center">Date Of Birth</label>
+			</td>
+			<td>
+			<label class="text-center">			
+			<input type="text" name="dob" id="dob" placeholder="" required></label>
 			</td>
 			</tr>
 			<tr>

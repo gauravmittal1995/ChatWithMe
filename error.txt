@@ -10,3 +10,5 @@ Dont be shy to ask any question. =)
 
 QUESTIONS:
 
+1. Many files are missing. Probably the bootstrap files. These files are accessed by the files already included.
+2. Page takes too long to load.

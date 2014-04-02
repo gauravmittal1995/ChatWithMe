@@ -22,11 +22,11 @@ class Message
 	public $sender,$reciever;
 	public $msg,$datetime;
 
-	public function __construct($sender,$receiver,$msg)
+	public function __construct($send,$rec,$msg)
 	{
 		//Input Validation
-		$this->sender=$sender;
-		$this->reciever=$reciever;
+		$this->sender=$send;
+		$this->reciever=$rec;
 		$this->msg=$msg;
 # Add code for Date Input
 	}
@@ -39,8 +39,9 @@ class Conversation
 
 	public function __construct($party1,$party2)
 	{
-		if( !array_search($party1,$GLOBAL_userlist) || !array_search($party2,$GOLBAL_userlist) )
-			return -2;
+		global $GLOBAL_userlist,$GLOBAL_activeusers;
+		//if( !array_search($party1,$GLOBAL_userlist) || !array_search($party2,$GOLBAL_userlist) )
+		//	return -2;
 		
 		// Code to open Database and read a party1/party2 data here
 		// and check whether two are friends
@@ -50,14 +51,18 @@ class Conversation
 		$this->msglist=array();
 	}
 
-	public add_msg($sender,$reciever,$msg)
+	public function add_msg($sender,$reciever,$msg)
 	{
-		if($sender==$party1 && $reciever!=$party2 || $sender==$party2 && $reciever!=$party1)
+		if($sender==$this->party1 && $reciever!=$this->party2 || $sender==$this->party2 && $reciever!=$this->party1)
 			return -1;
 		$message=new Message($sender,$reciever,$msg);
 		array_push($this->msglist,$message);
 	}
 
 }
+
+$test=new Conversation("Nair","Paul");
+$var=$test->add_msg("Nair","Paul","This is BullShit.");
+echo $var;
 ?>
 </body></html>

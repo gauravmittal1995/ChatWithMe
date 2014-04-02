@@ -7,7 +7,7 @@
    < 0 : Fatal Error
    0   : Job Done but without complete success
    1   : Done with complete success
-*/
+ */
 
 $GLOBAL_userlist=array();
 $GLOBAL_activeusers=array();
@@ -19,28 +19,27 @@ class User
 
 	var $interest=array(),$friends=array();
 
+
 	public function __construct($name,$handle,$dob,$email,$passwd) 
 	{
 		if ($name==NULL || $handle==NULL || $passwd==NULL )
 			return -1;
+		global $GLOBAL_userlist,$GLOBAL_activeusers;
 
-		$maillest='/^[a-z0-9]*[@][a-z]*[.][a-z]*$/';
-		$flag=preg_match($mailtest,$email);
-		if(flag!=1)
+		if( !filter_var($email,FILTER_VALIDATE_EMAIL) )
 			return -1;
-
-		$class=get_class($dob);
-		if ($class!="DateTime")
-			return -1;
+		//$class=get_class($dob);
+		//if ($class!="DateTime")
+		//	return -1;
 
 		$this->user_name= $name;
 		$this->user_handle= $handle;
 		$this->user_dob= $dob;
 		$this->email= $email;
 		$this->passwd= $passwd;
-		
+
 		array_push($GLOBAL_userlist,$name);
-		//array_push($GLOBAL_activeusers,$this);
+		array_push($GLOBAL_activeusers,$this);
 
 		return 1;
 	}
@@ -48,6 +47,7 @@ class User
 # edit add_friend to update the friend's frndlist 
 	public function add_friend($name)
 	{
+		global $GLOBAL_userlist,$GLOBAL_activeusers;
 		if($name==NULL || array_search($name,$GLOBAL_userlist)==FALSE)
 			return -1;
 		if(array_search($name,$this->friends)!=FALSE)
@@ -60,6 +60,7 @@ class User
 	}
 	public function remove_friend($name)
 	{
+		global $GLOBAL_userlist,$GLOBAL_activeusers;
 		$index=array_search($name,$this->friends);
 		if($index==FALSE)
 			return -1;
@@ -70,9 +71,10 @@ class User
 #--------------------------------------------------------------------------------------------------------
 	public function add_interest($intr)
 	{
+		global $GLOBAL_userlist,$GLOBAL_activeusers;
 		if($intr==NULL)
 			return -1;
-	
+
 		if(array_search($intr,$this->interest)!=FALSE)
 			return 0;
 		array_push($this->interest,$intr);
@@ -82,6 +84,7 @@ class User
 
 	public function remove_interest($intr)
 	{
+		global $GLOBAL_userlist,$GLOBAL_activeusers;
 		$index=array_search($intr,$this->interest);
 		if($index==FALSE)
 			return -1;
@@ -91,6 +94,13 @@ class User
 	}
 
 }
-echo "Aaditya"
+
+$test=new User("Aaditya","Nair","6/4/94","aaditya@mail.com","0ajbdaj");
+//echo $test;
+echo "<BR>";
+
+echo $test->add_friend("abc");
+serialize($test);
+
 ?>
 </body></html>

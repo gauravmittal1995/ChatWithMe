@@ -9,6 +9,11 @@
    1   : Done with complete success
  */
 
+/*
+   To Do: Update DoB;
+ */
+
+
 $GLOBAL_userlist=array();
 $GLOBAL_activeusers=array();
 
@@ -44,6 +49,9 @@ class User
 		return 1;
 	}
 
+	public function __toString()
+	{	return $this->user_name;  }
+
 # edit add_friend to update the friend's frndlist 
 	public function add_friend($name)
 	{
@@ -52,8 +60,6 @@ class User
 			return -1;
 		if(array_search($name,$this->friends)!=FALSE)
 			return 0;
-
-
 
 		array_push($this->friends,$name);
 		return 1;
@@ -96,7 +102,7 @@ class User
 }
 
 $test=new User("Aaditya","Nair","6/4/94","aaditya@mail.com","0ajbdaj");
-//echo $test;
+echo $test;
 echo "<BR>";
 
 echo $test->add_friend("abc");

@@ -12,7 +12,7 @@ include("headerfooter.php");
 			<div class="container">
 				<h3 class="text-center">General Account Settings</h3>
 				<fieldset>				
-				<table class="table table-bordered">
+				<table class="table">
 					<tr>
 						<td><label class="text-center">Username</label></td>
 						<td></td>

@@ -1,5 +1,6 @@
 <?php
 include("headerfooter.php");
+include("varfromtable.php");
 ?>
 <div class="tabbable"> <!-- Only required for left/right tabs -->
 	<ul class="nav nav-tabs">
@@ -14,20 +15,20 @@ include("headerfooter.php");
 				<fieldset>				
 				<table class="table table-bordered">
 					<tr>
-						<td><label class="text-center">Username</label></td>
-						<td></td>
+						<td><label class="text-center">Username:</label></td>
+						<td><?php echo("$name");?></td>
 					</tr>
 					<tr>
-						<td><label class="text-center">Handle</label></td>
-						<td></td>
+						<td><label class="text-center">Handle:</label></td>
+						<td><?php echo("$handle");?></td>
 					</tr>
 					<tr>
-						<td><label class="text-center">Email</label></td>
-						<td></td>
+						<td><label class="text-center">Email:</label></td>
+						<td><?php echo("$email");?></td>
 					</tr>
 					<tr>
-						<td><label class="text-center">Date of Birth</label></td>
-						<td></td>
+						<td><label class="text-center">Date of Birth:</label></td>
+						<td><?php echo("$dob");?></td>
 					</tr>
 				</table>
 				</fieldset>

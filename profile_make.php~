@@ -49,10 +49,7 @@ function changetoform()
 			</div>
 		</div>
 		<div class="tab-pane" id="tab2">
-			<!--Enter Code for tab2-->
-			<div class="container" id="privacysetting">			
-				<button onclick="showchange()" class="btn">Change Password</button>
-			</div>
+			<!--Enter Code for tab2 -->
 		</div>
 	</div>
 </div>

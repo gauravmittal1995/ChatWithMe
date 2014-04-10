@@ -33,7 +33,13 @@ $(document).ready(function(){
 			<!--Enter Code for tab1-->
 			<div class="container" id="generalsetting">
 				<h3 class="text-center">General Account Settings</h3>
-				<fieldset>				
+				<fieldset>
+				<?php
+					if(isset($_GET['msg1'])){
+						$msg1=$_GET['msg1'];
+						echo("<label class='text-center'><h4 style='color:blue'>$msg1</h4></label>");
+					}
+				?>				
 				<table class="table table-bordered">
 					<tr>
 						<td><label class="text-center">Username:</label></td>
@@ -53,9 +59,9 @@ $(document).ready(function(){
 					</tr>
 				</table>
 				</fieldset>
-				<button type="button" class="btn" onclick="changetoform()">Edit Information</button>
-				<button type="button" id="flip" class="btn">Change Password</button>
+				<button type="button" class="btn" onclick="changetoform()">Edit Information</button><br><br>
 			</div>
+				<button type="button" id="flip" class="btn">Change Password</button>
 			<br><br>
 			<div id="panel" class="container" style="display:none">				
 				<form name="form2" method="post" action="passchange.php">

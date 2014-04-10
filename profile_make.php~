@@ -16,7 +16,7 @@ function changetoform()
 
 $(document).ready(function(){
   $("#flip").click(function(){
-    $("#panel").slideToggle(0);
+    $("#panel").slideToggle(50);
   });
 });
 

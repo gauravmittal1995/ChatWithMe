@@ -88,7 +88,7 @@ $(document).ready(function(){
 		<div class="tab-pane" id="tab2">
 			<!--Enter Code for tab2-->
 			<div class="container" id="profilesetting">			
-				<h3 class="text-center"><?php echo("Profile Setting For $handle");?></h3>							
+				<h3 class="text-center"><?php echo("Profile Setting For $handle"); ?></h3>							
 			</div>
 		</div>
 	</div>

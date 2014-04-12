@@ -17,6 +17,15 @@ include("headerfooter.php")
 	<form name="form" method="post" action="login.php">
 		<fieldset>
 			<legend class="text-center">Login</legend>
+			<label class="text-center">
+				<?php
+					//Displays Error messages if any.
+					if(isset($_GET['msg1'])){
+						$msg1=$_GET['msg1'];
+						echo("<label class='text-center'><h4 style='color:red'>$msg1</h4></label>");
+					}
+				?>
+			</label>			
 			<table class="table table-bordered table-condensed">
 			<tr>
 			<td>			

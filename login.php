@@ -34,12 +34,12 @@ header("Location: profile.php");
 }
 //If password is incorrect.
 else{
-echo("Password incorrect");
+header("Location: signup.php?msg1=Username or Password Invalid");
 }
 }
 // if count is 0. i.e Data doesnt exist in Table.
 else {
-echo ("Username entered is incorrect");
+header("Location: signup.php?msg1=Username or Password Invalid");
 }
 }
 ?>

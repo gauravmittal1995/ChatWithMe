@@ -14,11 +14,13 @@ function changetoform()
 	idspace.innerHTML='<h3 class="text-center">General Account Settings</h3><form name="form1" method="post" action="makechange.php"><fieldset><table class="table table-bordered"><tr><td><label class="text-center">Username:</label></td><td><label class="text-center"><input name="username" type="text" value="<?php echo("$name");?>"></label></td></tr><tr><td><label class="text-center">Handle:</label></td><td><label class="text-center"><input name="handle" type="text" value="<?php echo("$handle");?>"></label></td></tr><tr><td><label class="text-center">Email:</label></td><td><label class="text-center"><input name="email" type="text" value="<?php echo("$email");?>"></label></td></tr><tr><td><label class="text-center">Date of Birth (mm/dd/yyyy):</label></td><td><label class="text-center"><input name="dob" id="dob" type="text" value="<?php echo("$dob");?>"></label></td></tr></table></fieldset><input type="submit" class="btn" value="Save Changes"></form>';
 }
 
-$(document).ready(function(){
-  $("#flip").click(function(){
-    $("#panel").slideToggle(0);
-  });
-});
+function clicker()
+{
+	var btn=document.getElementById("flip");
+	var blk=document.getElementById("panel");
+	btn.style.display='none';
+	blk.style.display='block';
+}
 
 </script>
 
@@ -35,9 +37,10 @@ $(document).ready(function(){
 				<h3 class="text-center">General Account Settings</h3>
 				<fieldset>
 				<?php
+					//Displays Error messages if any.
 					if(isset($_GET['msg1'])){
 						$msg1=$_GET['msg1'];
-						echo("<label class='text-center'><h4 style='color:blue'>$msg1</h4></label>");
+						echo("<label class='text-center'><h4 style='color:red'>$msg1</h4></label>");
 					}
 				?>				
 				<table class="table table-bordered">
@@ -61,8 +64,8 @@ $(document).ready(function(){
 				</fieldset>
 				<button type="button" class="btn" onclick="changetoform()">Edit Information</button><br><br>
 			</div>
-				<button type="button" id="flip" class="btn">Change Password</button>
-			<br><br>
+				<button type="button" id="flip" class="btn" onclick="clicker()">Change Password</button>
+			
 			<div id="panel" class="container" style="display:none">				
 				<form name="form2" method="post" action="passchange.php">
 					<fieldset>

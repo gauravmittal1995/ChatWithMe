@@ -8,7 +8,7 @@ $handle= ucfirst($handle);
 ?>
 
 <div class="container">
-	<h3 class="text-center"><?php echo("<span style='color:blue'>Welcome $handle</span><br>Profile Contructor");?></h3>
+	<h3 class="text-center"><?php echo("<span style='color:blue'>Welcome $handle</span><br>Profile Contructor")?></h3>
 	<form name="profileform" method="post" action="profile_indb.php">
 		<fieldset>
 			<table class="table table-bordered">

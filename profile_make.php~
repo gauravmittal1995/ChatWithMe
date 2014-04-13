@@ -82,12 +82,9 @@ function clicker()
 								<td><label class="text-center">Confirm New Password:</label></td>
 								<td><label class="text-center"><input name="confpass" type="password"></label></td>
 							</tr>
-							<tr>
-								<td><label class="text-center"><input type="submit" class="btn" value="Change Password"></label></td>
-								<td><label class="text-center"><button type="reset" class="btn">Reset</button></label></td>
-							</tr>
 						</table>
 					</fieldset>
+					<input type="submit" class="btn" value="Change Password">
 				</form>		
 			</div>
 		</div>

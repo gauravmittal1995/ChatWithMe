@@ -286,10 +286,6 @@ $handle= ucfirst($handle);
 					<td><label class="text-center">Contact No:</label></td>
 					<td><label class="text-center"><input name="phonenum" required></label></td>
 				</tr>
-				<tr>
-					<td><label class="text-center"><input type="submit" class="btn" value="Construct Profile"></label></td>
-					<td><label class="text-center"><button type="reset" class="btn">Reset</button></label></td>
-				</tr>
 			</table>
 		</fieldset>
 	</form>

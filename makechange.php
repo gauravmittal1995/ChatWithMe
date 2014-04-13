@@ -24,7 +24,7 @@ $result=mysqli_query($conn,$sql);
 //If sql works and its updated.
 if($result){
 //Redirect to profile_make.php page.
-header("Location: profile_make.php");
+header("Location: profile_make.php?msg1=INFORMATION UPDATED");
 }
 //if it doesnt work.
 else{

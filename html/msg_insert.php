@@ -9,9 +9,9 @@
 
 #include "classes/message.php";
 
-$Sender= "Mittal"  ;
+$Sender= "Nair"  ;
 $Reciever= "Tulsyan";
-$Message=  "Paul";
+$Message=  "Bakwas";
 
 $host="localhost";
 $username="root";

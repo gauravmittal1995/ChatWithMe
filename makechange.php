@@ -24,10 +24,10 @@ $result=mysqli_query($conn,$sql);
 //If sql works and its updated.
 if($result){
 //Redirect to profile_make.php page.
-header("Location: profile_make.php?msg1=INFORMATION UPDATED");
+header("Location: profile_make.php?msg1=Information Updated");
 }
 //if it doesnt work.
 else{
-echo("Update error.");
+header("Location: profile_make.php?msg1=Connection Error");
 }
 ?>

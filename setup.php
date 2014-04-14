@@ -1,8 +1,8 @@
 <?php
 
 $host="localhost"; // Host name 
-$username="root"; // Mysql username 
-$password="toor"; // Mysql password 
+$username="root"; // Mysql username
+$password="toor"; // Mysql password
 $db_name="ChatWithMe"; // Database name 1
 
 //Connect to server and select database.

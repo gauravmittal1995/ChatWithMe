@@ -1,6 +1,6 @@
 <?php
 include('config.php');
-
+include('headerfooter.php');
 // table name 
 $tbl_name=temp_members_db;
 
@@ -50,7 +50,7 @@ echo "Not found your email in our database";
 
 // if your email succesfully sent
 if($sentmail){
-echo "Your Confirmation link Has Been Sent To Your Email Address.";
+echo "<div class='container'>Your Confirmation link Has Been Sent To Your Email Address. On clicking the confirmation link you will be directed to a profile contructor page. Fill in the details to set up your profile.</div>";
 }
 else {
 echo "Cannot send Confirmation link to your e-mail address";

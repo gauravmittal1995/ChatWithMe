@@ -3,21 +3,25 @@ include("headerfooter.php");
 include("varfromtable.php");
 ?>
 
+<?php
+$handle= ucfirst($handle);
+?>
+
 <div class="container">
-	<h3 class="text-center"><?php echo("<span style='color:blue'>Welcome $handle</span><br>Profile Contructor")?></h3>
+	<h3 class="text-center"><?php echo("<span style='color:blue'>Welcome $handle</span><br>Profile Contructor");?></h3>
 	<form name="profileform" method="post" action="profile_indb.php">
 		<fieldset>
 			<table class="table table-bordered">
 				<tr>
-					<td><label class="text-center">First Name:</label>
-					<td><label class="text-center"><input name="firstname" required></label>
+					<td><label class="text-center">First Name:</label></td>
+					<td><label class="text-center"><input name="firstname" required></label></td>
 				</tr>
 				<tr>
-					<td><label class="text-center">Last Name:</label>
-					<td><label class="text-center"><input name="lastname" required></label>
+					<td><label class="text-center">Last Name:</label></td>
+					<td><label class="text-center"><input name="lastname" required></label></td>
 				</tr>
 				<tr>
-					<td><label class="text-center">Sex:</label>
+					<td><label class="text-center">Sex:</label></td>
 					<td><label class="text-center">
 						<label class="radio inline">
 							<input type="radio" name="sex" value="male" checked>male
@@ -28,7 +32,7 @@ include("varfromtable.php");
 					</label></td>
 				</tr>
 				<tr>
-					<td><label class="text-center">Country:</label>
+					<td><label class="text-center">Country:</label></td>
 					<td><label class="text-center"><select name="country"> 
 						<option value="" selected="selected">Select Country</option> 
 						<option value="United States">United States</option> 
@@ -272,12 +276,21 @@ include("varfromtable.php");
 						<option value="Yemen">Yemen</option> 
 						<option value="Zambia">Zambia</option> 
 						<option value="Zimbabwe">Zimbabwe</option>
-						</select></label>
+						</select></label></td>
 				</tr>
 				<tr>
-					<td><label class="text-center">City:</label>
-					<td><label class="text-center"><input name="city" required></label>
+					<td><label class="text-center">City:</label></td>
+					<td><label class="text-center"><input name="city" required></label></td>
 				</tr>
+				<tr>
+					<td><label class="text-center">Contact No:</label></td>
+					<td><label class="text-center"><input name="phonenum" required></label></td>
+				</tr>
+				<tr>
+					<td><label class="text-center"><input type="submit" class="btn" value="Construct Profile"></label></td>
+					<td><label class="text-center"><button type="reset" class="btn">Reset</button></label></td>
+				</tr>
+			</table>
 		</fieldset>
 	</form>
 </div>

@@ -63,8 +63,9 @@
 							<?php
 							session_start();
 							if(isset($_SESSION['handle'])){
+							$handle=ucfirst($_SESSION['handle']);
 							echo "<li>
-								<a href='profile_make.php'><i class='icon-home icon-white'></i> " . $_SESSION['handle'] . "</a>
+								<a href='profile_make.php'><i class='icon-home icon-white'></i> " . $handle . "</a>
 							</li>
 
 							<li>

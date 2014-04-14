@@ -1,6 +1,6 @@
 <?php
 include('config.php');
-
+session_start();
 // Passkey that got from link 
 $passkey=$_GET['passkey'];
 $tbl_name1="temp_members_db";
@@ -37,10 +37,8 @@ else {
 echo "Wrong Confirmation code";
 }
 
-// if successfully moved data from table"temp_members_db" to table "registered_members" displays message "Your account has been activated" and don't forget to delete confirmation code from table "temp_members_db"
+// if successfully moved data from table"temp_members_db" to table "registered_members" and redirect to profile_contruct.php
 if($result2){
-
-echo "Your account has been activated. You can now login by clicking <a href='signup.php'>here</a>.";
 
 // Delete information of this user from table "temp_members_db" that has this passkey 
 $sql3="DELETE FROM $tbl_name1 WHERE confirm_code = '$passkey'";
@@ -49,6 +47,8 @@ $result3=mysqli_query($conn,$sql3);
 $sql4="CREATE TABLE `$name` ( `id` int(4) NOT NULL auto_increment, `objectname` varchar(65) NOT NULL default '', `objecttype` varchar(65) NOT NULL default '', PRIMARY KEY (`id`) ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ";
 
 $result4=mysqli_query($conn,$sql4);
+$_SESSION['handle']=$handle;
+header("Location: profile_construct.php");
 
 }
 

@@ -9,6 +9,12 @@ $handle= ucfirst($handle);
 
 <div class="container">
 	<h3 class="text-center"><?php echo("<span style='color:blue'>Welcome $handle</span><br>Profile Contructor");?></h3>
+	<?php 
+		if(isset($_GET['msg'])){
+			$msg=$_GET['msg'];
+			echo("<h4 class='text-center' style='color:red'>$msg</h4>");
+		}
+	?>
 	<form name="profileform" method="post" action="profile_indb.php">
 		<fieldset>
 			<table class="table table-bordered">
@@ -24,18 +30,17 @@ $handle= ucfirst($handle);
 					<td><label class="text-center">Sex:</label></td>
 					<td><label class="text-center">
 						<label class="radio inline">
-							<input type="radio" name="sex" value="male" checked>male
+							<input type="radio" name="sex" value="Male" checked>Male
 						</label>
 						<label class="radio inline">
-							<input type="radio" name="sex" value="female">female
+							<input type="radio" name="sex" value="Female">Female
 						</label>
 					</label></td>
 				</tr>
 				<tr>
 					<td><label class="text-center">Country:</label></td>
-					<td><label class="text-center"><select name="country"> 
-						<option value="" selected="selected">Select Country</option> 
-						<option value="United States">United States</option> 
+					<td><label class="text-center"><select name="country">  
+						<option value="United States" selected="selected">United States</option> 
 						<option value="United Kingdom">United Kingdom</option> 
 						<option value="Afghanistan">Afghanistan</option> 
 						<option value="Albania">Albania</option> 
@@ -287,8 +292,8 @@ $handle= ucfirst($handle);
 					<td><label class="text-center"><input name="phonenum" required></label></td>
 				</tr>
 				<tr>
-					<td><label class="text-center"><input type="submit" class="btn" value="Construct Profile"></label></td>
 					<td><label class="text-center"><button type="reset" class="btn">Reset</button></label></td>
+					<td><label class="text-center"><input type="submit" class="btn" value="Construct Profile"></label></td>
 				</tr>
 			</table>
 		</fieldset>

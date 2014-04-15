@@ -4,8 +4,12 @@ session_start();
 
 //check whether session handle was set(i.e is already logged in.
 if(isset($_SESSION['handle'])){
-$handle = ucfirst($_SESSION['handle']);
-echo("Welcome to ChatWithMe,<strong> ". $handle."</strong>.");
+include("varfromtable.php");
+include("profilefromtable.php");
+echo("<div class='container'>");
+echo("Welcome to ChatWithMe,<strong> ". ucfirst($handle)."</strong><br>");
+echo("FIRSTNAME: $firstname<br>LASTNAME: $lastname<br>SEX: $sex<br>COUNTRY: $country<br>CITY: $city<br>CONTACT NUMBER: $phonenum<br>USERNAME: $name<br>EMAIL: $email<br>HANDLE: $handle<br>BATE OF BIRTH(MM/DD/YYYY): $dob");
+echo("</div>");
 }
 //If not logged in.
 else{

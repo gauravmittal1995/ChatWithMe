@@ -57,8 +57,9 @@
 								<a href="#">Friends</a>
 							</li>
 						</ul>
-								<form class="navbar-search pull-left">   										<input type="text" class="search-query" placeholder="Search people"> 
-    								</form>
+							<form class="navbar-search pull-left" action="searchaction.php" method="post">
+								<input name="search" type="text" class="search-query" placeholder="Search people"> 
+    							</form>
 						<ul class="nav pull-right">
 							<?php
 							session_start();

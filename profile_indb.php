@@ -18,6 +18,7 @@ $sql3="INSERT INTO $name(objectname,objecttype)VALUES('$sex','SEX')";
 $sql4="INSERT INTO $name(objectname,objecttype)VALUES('$country','COUNTRY')";
 $sql5="INSERT INTO $name(objectname,objecttype)VALUES('$city','CITY')";
 $sql6="INSERT INTO $name(objectname,objecttype)VALUES('$phonenum','PHONENUM')";
+$sql7="INSERT INTO $name(objectname,objecttype)VALUES('online','CHATSTATUS')";
 
 //Insert in table.
 $result1=mysqli_query($conn,$sql1);
@@ -26,9 +27,10 @@ $result3=mysqli_query($conn,$sql3);
 $result4=mysqli_query($conn,$sql4);
 $result5=mysqli_query($conn,$sql5);
 $result6=mysqli_query($conn,$sql6);
+$result7=mysqli_query($conn,$sql7);
 
 //If all the results are being satisfied.
-if(($result1)&&($result2)&&($result3)&&($result4)&&($result5)&&($result6)){
+if(($result1)&&($result2)&&($result3)&&($result4)&&($result5)&&($result6)&&(result7)){
 
 header("Location: profile.php");
 	

@@ -15,18 +15,23 @@ $phonenum=$_POST['phonenum'];
 $sql1="UPDATE $name 
 SET objectname='$firstname'
 WHERE objecttype='FIRSTNAME';";
+
 $sql2="UPDATE $name 
 SET objectname='$lastname'
 WHERE objecttype='LASTNAME';";
+
 $sql3="UPDATE $name 
 SET objectname='$sex'
 WHERE objecttype='SEX';";
+
 $sql4="UPDATE $name 
 SET objectname='$country'
 WHERE objecttype='COUNTRY';";
+
 $sql5="UPDATE $name 
 SET objectname='$city'
 WHERE objecttype='CITY';";
+
 $sql6="UPDATE $name 
 SET objectname='$phonenum'
 WHERE objecttype='PHONENUM';";

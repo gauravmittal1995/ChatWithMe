@@ -30,6 +30,11 @@ $handle=$rows['handle'];
 if($password==$pass){
 //Redirect to new page after storing the handle in the session.
 $_SESSION['handle']=$handle;
+//Become Online
+$sql1="UPDATE $name 
+SET objectname='online'
+WHERE objecttype='CHATSTATUS';";
+
 header("Location: profile.php");
 }
 //If password is incorrect.

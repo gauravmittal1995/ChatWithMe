@@ -115,7 +115,7 @@ $sql4="SELECT * FROM $name WHERE objectname='$name1'";
 $result4=mysqli_query($conn,$sql4);
 $count1=mysqli_num_rows($result4);
 if($count1==0){
-echo "<form action='addfriend.php?friendname=$name1'><button class='btn' value='Send Friend Request' type='submit'></button></form>";
+echo "<form action='addfriend.php?friendname=$name1'><button class='btn' type='submit'>Send Friend Request</button></form>";
 }
 else{
 $rows4=mysqli_fetch_array($result4);
@@ -127,7 +127,7 @@ else if($condition=='FRIENDSENT'){
 echo("<i style='color:grey'>Friend Request Sent</i>");
 }
 else if($condition='FRIENDTOACCEPT'){
-echo("<table class='table'><tr><td><label class='text-center'><form action='acceptfriend.php?friendname=$name1'><button class='btn' value='Accept Friend Request' type='submit'></button></form></label></td><td><label class='text-center'><form action='declinefriend.php?friendname=$name1'><button class='btn' value='Decline Friend Request' type='submit'></button></form></label></td></tr></table>");
+echo("<table class='table'><tr><td><label class='text-center'><form action='acceptfriend.php?friendname=$name1'><button class='btn' type='submit'>Accept Friend Request</button></form></label></td><td><label class='text-center'><form action='declinefriend.php?friendname=$name1'><button class='btn' type='submit'>Decline Friend Request</button></form></label></td></tr></table>");
 }
 }
 }

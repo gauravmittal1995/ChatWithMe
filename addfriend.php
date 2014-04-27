@@ -2,6 +2,7 @@
 include("varfromtable.php");
 include("config.php");
 $friendname=$_GET['friendname'];
+echo("$friendname");
 $sql1="INSERT INTO $name(objectname,objecttype)VALUES('$friendname','FRIENDSENT')";
 $sql2="INSERT INTO $friendname(objectname,objecttype)VALUES('$name','FRIENDTOACCEPT')";
 $result1=mysqli_query($conn,$sql1);

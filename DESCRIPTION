@@ -1,0 +1,8 @@
+This app works like a combiation of skype and facebook chats. User registers, makes his profile, adds friends. There are two type of chats available:
+1) Single User Chat - Private Chat
+2) Multiple User Chat - Group Chat
+THe whole UI is made in bootstrap so this app can also be run from mobile browsers.
+
+The user has an option to change his profile information and password at any time. There is a search engine which can search for users by which a user can find and add friends.
+
+There is an option of offline messaging which basically means that a user can leave message for his friends on their chat page and the second user recieves them as soon as he logs back in.

@@ -59,7 +59,9 @@ include("varfromtable.php");
 		for ($x=0; $x<$count; $x++) {
 		$rows=mysqli_fetch_array($result1);
 		$namefriend=$rows['objectname'];
-		echo("<a href='friendprofile.php?friend=$namefriend'>$namefriend</a><hr style='height:2px;background-color:#d0d0d0;'>");
+		echo("<a href='friendprofile.php?friend=$namefriend'>$namefriend</a><br>");
+		echo("<table class='table'><tr><td><label class='text-center'><form action='acceptfriend.php?friendname=$namefriend'><button class='btn' value='Accept Friend Request' type='submit'></button></form></label></td><td><label class='text-center'><form action='declinefriend.php?friendname=$namefriend'><button class='btn' value='Decline Friend Request' type='submit'></button></form></label></td></tr></table>");
+		echo("<hr style='height:2px;background-color:#d0d0d0;'>");
 		}
 		}
 		else{

@@ -40,7 +40,7 @@
 					<div class="nav-collapse collapse">
 						<ul class="nav">
 							<li>
-                						<a href="profile.php">ChatRoom</a>
+                						<a href="chat.php">ChatRoom</a>
               						</li>
 							<li>
 								<a href="friend.php">Friends</a>

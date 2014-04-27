@@ -34,16 +34,22 @@ echo "Table $tbl_name1 couldnt be created. Check the hostname,username,password,
 $sql2="CREATE TABLE `$tbl_name2` ( `id` int(4) NOT NULL auto_increment, `name` varchar(65) NOT NULL default '', `email` varchar(65) NOT NULL default '', `password` varchar(65) NOT NULL default '', `handle` varchar(65) NOT NULL default '', `dob` varchar(15) NOT NULL default '', PRIMARY KEY (`id`) ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;";
 $result2=mysqli_query($conn,$sql2);
 
+$sql3="CREATE TABLE `Messages` ( `id` int(4) NOT NULL auto_increment, `Sender` varchar(65) NOT NULL default '', `Reciever` varchar(65) NOT NULL default '', `Message` varchar(100) NOT NULL default '', `Send_Date` DATE, `Send_Time` TIME, PRIMARY KEY (`id`) ) ENGINE=MyISAM DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;";
+$result3=mysqli_query($conn,$sql3);
+
 //If succesfully created.
 if($result2){
 echo "Table $tbl_name2 succesfully created. \r\n";
+}
+if($result3){
+echo "Table Messages succesfully created. \r\n";
 }
 //If problem while creating.
 else{
 echo "Table $tbl_name2 couldnt be created. Check the hostname,username,password,database_name. Maybe another table of the same name already exists \r\n";
 }
 
-if(($result1)&&($result2)){
+if(($result1)&&($result2)&&($result3)){
 echo "Tables created. \r\n";
 }
 else

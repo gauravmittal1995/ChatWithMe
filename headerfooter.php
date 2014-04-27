@@ -40,21 +40,10 @@
 					<div class="nav-collapse collapse">
 						<ul class="nav">
 							<li>
-								<a href="profile.php">Profile</a>
-							</li>
-							<li class="dropdown">
-                						<a href="#" class="dropdown-toggle"  data-toggle="dropdown">ChatRooms<b class="caret"></b></a>
-                						<ul class="dropdown-menu" role="menu">
-                  							<li><a href="#">Personal Rooms(private)</a></li>
-                  							<li><a href="#">Conference Rooms(private)</a></li>
-                 							<li><a href="#"></a></li>
-								<!--	<li class="divider"></li>-->
-									<li><a href="#">Personal Rooms(public)</a></li>
-									<li><a href="#">Conference Rooms(public)</a></li>
-                						</ul>
+                						<a href="profile.php">ChatRoom</a>
               						</li>
 							<li>
-								<a href="#">Friends</a>
+								<a href="friend.php">Friends</a>
 							</li>
 						</ul>
 							<form class="navbar-search pull-left" action="searchaction.php" method="post">
